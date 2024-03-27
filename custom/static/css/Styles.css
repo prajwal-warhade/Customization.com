@@ -34,18 +34,17 @@ body{
     transition: 1s ease-in-out;
 }
 .image1-container {
-    width: 700px; /* Set the width of the container */
-    margin: 0 auto; /* Center the container horizontally */
-    border: 1px solid #ccc; /* Add a border around the container */
-     /* Add some padding inside the container */
+    width: 700px; 
+    margin: 0 auto; 
+    border: 1px solid #ccc; 
 }
 
 .image1 {
-    height: 50%; /* Set the height to 50% of the parent container */
-    width: 50%; /* Set the width to 50% of the parent container */
-    max-width: 100%; /* Make sure the image doesn't exceed the container width */
-    display: block; /* Remove any extra space below the image */
-    margin: 0 auto; /* Center the image horizontally */
+    height: 50%; 
+    width: 50%;
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto; 
 }
 .signin-signup {
     position: absolute;
