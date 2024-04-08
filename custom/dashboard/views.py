@@ -2,5 +2,6 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def custom(request):
-    return render(request,'login-registration.html')
+def index(request):
+    return render(request,'login-register/login-registration.html')
+

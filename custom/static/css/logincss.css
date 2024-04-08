@@ -1,4 +1,3 @@
-/*<<<<<<<<<  Login and  Registration Css is Here>>>>>>>>> */
 * {
     margin: 0;
     padding: 0;
@@ -7,20 +6,25 @@
 }
 
 body {
-
-
-    background: #fffdfd;
+    
+    
+    justify-content: center;
+    min-height: 100vh;
+    background: #eae3e3;
 }
-
+.alert{
+    text-align: center;
+}
 .container {
     position: relative;
-    width: 60vw;
-    height: 80vh;
-    top: 2vw;
-    background: #ffffff;
+    width: 70vw;
+    height: 90vh;
+    top:2vw;
+    background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     overflow: hidden;
+   
 }
 
 .container::before {
@@ -30,29 +34,15 @@ body {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #d13d7438, #b8055f);
+    background: linear-gradient(-45deg, #e13e95, #af015e);
     z-index: 6;
     transform: translateX(100%);
     transition: 1s ease-in-out;
 }
 
-.image1-container {
-    width: 700px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-}
-
-.image1 {
-    height: 50%;
-    width: 50%;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
 .signin-signup {
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -86,7 +76,7 @@ form.sign-up-form {
 
 .title {
     font-size: 35px;
-    color: rgb(86, 0, 36);
+    color: #af015e;
     margin-bottom: 10px;
 }
 
@@ -95,7 +85,7 @@ form.sign-up-form {
     height: 50px;
     background: #f0f0f0;
     margin: 10px 0;
-    border: 2px solid rgb(86, 0, 36);
+    border: 2px solid #af015e;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -124,7 +114,7 @@ form.sign-up-form {
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: rgb(86, 0, 36);
+    background: #af015e;
     color: #fff;
     font-weight: 600;
     margin: 10px 0;
@@ -133,7 +123,7 @@ form.sign-up-form {
 }
 
 .btn:hover {
-    background: #ff2441;
+    background: #af015e;
 }
 
 .social-text {
@@ -152,7 +142,7 @@ form.sign-up-form {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0b0b0b;
+    color: #444;
     border: 1px solid #444;
     border-radius: 50px;
     margin: 0 5px;
@@ -163,8 +153,8 @@ a {
 }
 
 .social-icon:hover {
-    color: #ff2441;
-    border-color: #ff2441;
+    color: #af015e;
+    border-color: #af015e;
 }
 
 .panels-container {
@@ -195,7 +185,7 @@ a {
 }
 
 .content {
-    color: #ffffff;
+    color: #fff;
     transition: 1.1s ease-in-out;
     transition-delay: 0.5s;
 }
@@ -210,7 +200,7 @@ a {
     padding: 10px 0;
 }
 
-.image-svg {
+.image {
     width: 100%;
     transition: 1.1s ease-in-out;
     transition-delay: 0.4s;
@@ -230,7 +220,9 @@ a {
     display: none;
 }
 
+
 /*Animation*/
+
 .container.sign-up-mode::before {
     transform: translateX(0);
 }
@@ -261,7 +253,9 @@ a {
     pointer-events: all;
 }
 
-/*Responsive*/
+
+/*Responsive login-register*/
+
 @media (max-width:779px) {
     .container {
         width: 100vw;
@@ -307,11 +301,11 @@ a {
     }
 }
 
-/*<<<<<<<<<Login and Registration Css Ends Here >>>>>>>>>>*/
+/*login section end*/
 
+/*------------navigation bar -------------------*/
 .navbar {
     box-shadow: 0px 5px 10px 0px #aaa;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
@@ -320,35 +314,63 @@ a {
     opacity: 0.90;
     height: 60px;
     z-index: 12;
-}
+    justify-content: center;
 
-.navbarMenu {
+}
+.nav {
     display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-
-.menu-items {
-    order: 2;
-    display: flex;
+.nav-item {
+    margin: 0 10px;
 }
-
-.menu-items li {
-    list-style: none;
-    margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.menu-items a {
+.nav-link {
+    color: #282728;
     text-decoration: none;
-    color: #444;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #9c046f;
+}
+.logo {
+    display: flex;
+    height: 40px;
+}
+.label {
+    color: hsl(158, 93%, 21%);
+    margin: 0; 
 }
 
-.menu-items a:hover {
-    color: #f1084a;
-    transition: color 0.3s ease-in-out;
+
+/*---------------------------footer section-----------*/
+
+.footer_area {
+    
+    z-index: 10;
+  
+    overflow: hidden;
+    box-shadow: 0 8px 48px 8px rgba(239, 87, 224, 0.175);
+    padding: 60px;
+    background-color: #dfdbdb; 
 }
+
+
+.footer_area .row {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.footer_social_area a {
+    border-radius: 50%;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+    display: inline-block;
+    background-color: #f468bc;
+    line-height: 40px;
+    box-shadow: none;
+    margin-right: 10px;
+}
+
