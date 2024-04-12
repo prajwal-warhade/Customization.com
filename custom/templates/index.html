@@ -11,6 +11,22 @@
         </a>
     </div>
 </section>
+
+{% for x in prod %}
+<div class="card">
+    <img src="{{x.pimage.url}}" alt="food" />
+    <div class="card-body">
+        <h5 class="card-title">{{x.name}}</h5>
+        <p class="card-text">{{x.pdetails}}</p>
+        <p class="original-price">Original Price: ₹120</p>
+        <p class="discount">Discount: 20%</p>
+        <p class="new-price">New Price: ₹{{x.price}}</p>
+        <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+
+</div>
+{% endfor %}
+
 <section id="about">
     <div class="about-wrapper container">
         <div class="about-text">
@@ -22,22 +38,11 @@
                 and rewarding user journeys.
             </p>
             <a href="/register"> <button type="register" class="btn btn-primary">Start Creating</button> </a>
-
         </div>
         <div class="about-img">
             <img src="/static/images/bg/bg-customize.avif" alt="food" />
         </div>
-        
-
     </div>
 </section>
-
-
-
-
-
-
-
-
 
 {% endblock 'main' %}

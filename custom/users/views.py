@@ -9,9 +9,10 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 import os,math,random,smtplib
+from product.models import Product
 
-def index(request):
-    return render(request,'index.html')
+
+    
 
 
 @csrf_protect
@@ -37,58 +38,9 @@ def sign_in(request):
 
             context['data1'] = u1
 
-            return render(request, 'index.html', context)
+            return redirect("/index/")
 
-'''def sign_up(request):
-    
-    context = {}
-    
-    if request.method == 'GET':
-        return render(request, 'login-register/login-registration.html' )
 
-    else:
-        request.method == 'POST'
-        n   =  request.POST['name']
-        un  =  request.POST['uname']
-        p   =  request.POST['upass']
-        cp  =  request.POST['ucpass']
-       
-
-       
-        if n=='' or un=='' or p=='' or cp=='':
-            context['errmsg']='fields can not be blank'
-            return render (request,'login-register/login-registration.html',context)
-
-        elif p!=cp:
-            context['errmsg']='password and confirm password not match'
-            return render(request,'login-register/login-registration.html',context)
-
-        elif len(p)<8:
-            context['errmsg']='password must be 8 characters'
-            return render(request,'login-register/login-registration.html',context)
-
-        else:
-            try:
-                u = User.objects.create(username=un)
-                u.set_password(p)
-                u.save()
-                
-                
-
-                if u is not None:
-                    pro = UserProfile.objects.create(user=u, name=n,email=un)
-                    pro.save()
-                    print(pro)
-                    context['success'] = 'Successfully registered'
-                    return render(request, 'login-register/login-registration.html', context)
-
-                else:
-                    context['errmsg'] = "Unfortunetely User Profile Not be created"
-                    return render(request, 'login-register/login-registration.html', context)
-            
-            except Exception:
-                    context['errmsg'] = "User Already exists"
-                    return render(request, 'login-register/login-registration.html', context)'''
 
 
 
@@ -163,11 +115,8 @@ def user_logout(request):
 def index(request):
 
     u = UserProfile.objects.filter(user = request.user)
-
-    context = {}
-
-    context['data1'] = u
-
+    p = Product.objects.filter(is_active=True) 
+    context = {'prod': p,'data1':u}
     return render(request,'index.html', context)
 
 def profile(request):

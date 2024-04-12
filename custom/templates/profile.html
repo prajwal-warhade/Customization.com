@@ -2,25 +2,28 @@
 {% load static %}
 {% block 'main' %}
 
-<h2>My Details :</h2>
 
-<table>
-    <tr>
-        <th>Your Name</th>
-        <th>Email</th>
-
-    </tr>
-    {% for x in data %}
-    <tr>
-
-        <td>{{x.name}}</td>
-        <td>{{x.user}}</td>
-    </tr>
-    {% endfor %}
-</table>
+{% for x in data %}
+<div class="card " style="width: 40rem;margin-left: 30%;height: auto;">
 
 
+  <div class="card-body">
+    <h5 class="card-title">Welcom to profile Section  {{x.name}} !!</h5>
+    <p class="card-text">viman nagar Eden garden society 411041 </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Name : {{x.name}}</li>
+    <li class="list-group-item">Email :{{x.user}}</li>
+    <li class="list-group-item">Add date of birth</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">edit profile</a>
+    <a href="#" class="card-link">logout</a>
+  </div>
+</div>
+{% endfor %}
 
+<!--<img src="https://picsum.photos/200/300?random=1" class="card-img-top" alt="Random Men's Profile Picture">-->
 
 
 {% endblock 'main' %}
