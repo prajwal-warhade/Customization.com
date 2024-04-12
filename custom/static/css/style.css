@@ -208,6 +208,7 @@
   object-position: right;
 }
 
+/* ......//products //...... */
 
 .discount {
   color: red;
@@ -221,11 +222,110 @@
 .card {
   width: 18rem;
   margin: 20px;
-  
+
 
 }
 
 .card-link {
   text-decoration: none;
   color: black;
+}
+
+/* ......//buttons//...... */
+.button-59 {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #490a29;
+  box-sizing: border-box;
+  color:#490a29;
+  cursor: pointer;
+  display: inline-flex;
+  fill:#490a29;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-59:focus {
+  color: #171e29;
+}
+
+.button-59:hover {
+  border-color: hsl(158, 93%, 21%);
+  color: hsl(158, 98%, 17%);
+  fill: hsl(158, 51%, 39%);
+}
+
+.button-59:active {
+  border-color: rgb(78, 29, 78);
+  color: rgb(94, 23, 78);
+  fill: rgb(221, 63, 168);
+}
+
+@media (min-width: 768px) {
+  .button-59 {
+    min-width: 170px;
+  }
+}
+/*----------------------------------------------------------------*/
+
+#button-59 {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #680134;
+  box-sizing: border-box;
+  color:#680134;
+  cursor: pointer;
+  display: inline-flex;
+  fill:#680134;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#button-59:focus {
+  color: #171e29;
+}
+
+#button-59:hover {
+  border-color: hsl(158, 93%, 21%);
+  color: hsl(158, 98%, 17%);
+  fill: hsl(158, 51%, 39%);
+}
+#button-59:active {
+  border-color: rgb(78, 29, 78);
+  color: rgb(94, 23, 78);
+  fill: rgb(221, 63, 168);
+}
+
+@media (min-width: 768px) {
+  #button-59 {
+    min-width: 170px;
+  }
 }

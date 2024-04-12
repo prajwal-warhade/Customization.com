@@ -113,10 +113,13 @@ def user_logout(request):
     return redirect('sign_up')
 
 def index(request):
-
     u = UserProfile.objects.filter(user = request.user)
-    p = Product.objects.filter(is_active=True) 
-    context = {'prod': p,'data1':u}
+    
+    p = Product.objects.filter(is_active=True) # for product show in index file 
+    context = {
+        'prod': p,
+        'data1':u
+        }
     return render(request,'index.html', context)
 
 def profile(request):
