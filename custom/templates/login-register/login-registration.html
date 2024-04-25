@@ -59,10 +59,6 @@
     </div>
     {% endif %}
 
-
-
-
-
     <div class="container">
         <div class="signin-signup">
             <form method="POST" action="{% url 'sign_in' %}" class="sign-in-form">
@@ -99,42 +95,31 @@
 
                 {% csrf_token %}
                 <h2 class="title">Sign up</h2>
-                
+
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input type="text" id="Input1" name="name" placeholder="Username">
                 </div>
-                
+
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
                     <input type="email" id="Input2" name="uname" placeholder="Email">
                 </div>
-                <button type="button" onclick="sendOTP()">Send OTP</button>
+
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
                     <input type="password" id="Input3" name="upass" placeholder="New Password">
                 </div>
-                
+
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
                     <input type="password" id="Input4" name="ucpass" placeholder="Confirm Password">
                 </div>
-            
-                <!-- OTP Input Field -->
-                <div class="input-field">
-                    <i class="fas fa-key"></i>
-                    <input type="text" id="otpInput" name="otp" maxlength="6" pattern="\d{6}" placeholder="OTP" required>
-                </div>
-            
-                <!-- Send OTP Button -->
-                
-                    
-                
-            
+
                 <input type="submit" value="Sign up" class="btn">
-                
+
                 <p class="social-text">Or Sign in with social platform</p>
-                
+
                 <div class="social-media">
                     <a href="#" class="social-icon">
                         <i class="fab fa-facebook"></i>
@@ -149,9 +134,9 @@
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
-                
+
                 <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
-                
+
             </form>
         </div>
         <div class="panels-container">
